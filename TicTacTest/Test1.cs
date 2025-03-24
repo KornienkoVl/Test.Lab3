@@ -266,5 +266,15 @@
             Assert.AreEqual(game.player, 1);
 
         }
+
+        [TestMethod]
+        public void TestMethodPlayNoMove()
+        {
+            Game game = new Game();
+
+            Assert.AreEqual(game.Play(0, 0), 0);
+            Assert.AreEqual(game.Play(0, 0), 4);
+
+        }
     }
 }
