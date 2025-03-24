@@ -19,6 +19,8 @@ namespace TicTac
         public Form1()
         {
             InitializeComponent();
+            game.MakeMove(1,1);
+            MessageBox.Show(game.map[1,1].ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,10 +76,11 @@ namespace TicTac
 
     public class Game
     {
-        private int[,] map = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+        public int[,] map = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
 
-        public bool MakeMove(int cell)
+        public bool MakeMove(int cellX, int cellY)
         {
+            map[cellX, cellY] = 1;
             return true;
         }
 
