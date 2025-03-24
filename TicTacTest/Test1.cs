@@ -186,4 +186,25 @@
         }
     }
 
+    [TestClass]
+    public sealed class TestClear
+    {
+        [TestMethod]
+        public void TestMethodClear()
+        {
+            Game game = new Game();
+
+            game.MakeMove(0, 0);
+            game.MakeMove(2, 1);
+            game.MakeMove(1, 2);
+
+            game.Clear();
+
+            Assert.AreEqual(game.map[0, 0], 0);
+            Assert.AreEqual(game.map[2, 1], 0);
+            Assert.AreEqual(game.map[1, 2], 0);
+
+            Assert.AreEqual(game.player, 1);
+        }
+    }
 }
