@@ -43,6 +43,22 @@
             Assert.IsTrue(game.MakeMove(1, 1));
             Assert.IsFalse(game.MakeMove(1, 1));
         }
+
+        [TestMethod]
+        public void TestMethodMakeMoveChangePlayer()
+        {
+            Game game = new Game();
+
+            game.MakeMove(0, 0);
+            game.MakeMove(0, 1);
+            game.MakeMove(0, 2);
+
+            Assert.AreEqual(game.map[0, 0], 1);
+            Assert.AreEqual(game.map[0, 1], -1);
+            Assert.AreEqual(game.map[0, 2], 1);
+        }
+
+
     }
     [TestClass]
     public sealed class TestChangePlayer
