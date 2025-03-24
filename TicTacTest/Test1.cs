@@ -1,7 +1,7 @@
 ﻿namespace TicTac.Test
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class TestMove
     {
         [TestMethod]
         public void TestMethodMakeMove()
@@ -44,4 +44,20 @@
             Assert.IsFalse(game.MakeMove(1, 1));
         }
     }
+    [TestClass]
+    public sealed class TestChangePlayer
+    {
+        [TestMethod]
+        public void TestMethodChangePlayer()
+        {
+            Game game = new Game();
+
+            Assert.AreEqual(game.player, 1);
+            game.ChangePlayer();
+            Assert.AreEqual(game.player, -1);
+            game.ChangePlayer();
+            Assert.AreEqual(game.player, 1);
+        }
+    }
+
 }
