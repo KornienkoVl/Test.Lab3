@@ -34,5 +34,14 @@
             Assert.IsTrue(game.MakeMove(0, 2));
             Assert.IsTrue(game.MakeMove(2, 0));
         }
+
+        [TestMethod]
+        public void TestMethodMakeMoveEmpty()
+        {
+            Game game = new Game();
+
+            Assert.IsTrue(game.MakeMove(1, 1));
+            Assert.IsFalse(game.MakeMove(1, 1));
+        }
     }
 }
