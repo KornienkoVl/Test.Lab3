@@ -18,62 +18,153 @@ namespace TicTac
 
         public Form1()
         {
-            InitializeComponent();
-            game.MakeMove(1,1);
-            game.MakeMove(1, 2);
-            game.MakeMove(2, 2);
-            MessageBox.Show(game.map[1,1].ToString());
+            InitializeComponent();         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            lblPlayer.Text = "X";
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
+            int var = game.Play(0, 0);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn1.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn1.Text = "X"; lblPlayer.Text = "O"; }
+
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
 
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            int var = game.Play(0, 1);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn2.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn2.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
+            int var = game.Play(0, 2);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn3.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn3.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
+            int var = game.Play(1, 0);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn4.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn4.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
+            int var = game.Play(1, 1);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn5.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn5.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
+            int var = game.Play(1, 2);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn6.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn6.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
+            int var = game.Play(2, 0);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn7.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn7.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
+            int var = game.Play(2, 1);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn8.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn8.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
+            int var = game.Play(2, 2);
+            if (var == 0)
+            {
+                if (game.player == 1) { btn9.Text = "O"; lblPlayer.Text = "X"; }
+                if (game.player == -1) { btn9.Text = "X"; lblPlayer.Text = "O"; }
 
+            }
+            if (var == 1) { MessageBox.Show("ПОБЕДА Х"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 2) { MessageBox.Show("НИЧЬЯ"); clearBtns(); lblPlayer.Text = "X"; }
+            if (var == 3) { MessageBox.Show("ПОБЕДА О"); clearBtns(); lblPlayer.Text = "X"; }
         }
+
+        private void clearBtns()
+        {
+            btn1.Text = "";
+            btn2.Text = "";
+            btn3.Text = "";
+            btn4.Text = "";
+            btn5.Text = "";
+            btn6.Text = "";
+            btn7.Text = "";
+            btn8.Text = "";
+            btn7.Text = "";
+        }     
     }
 
     public class Game
@@ -158,28 +249,32 @@ namespace TicTac
         // 1 - победил Х
         // 2 - ничья
         // 3 - победил O
+        // 4 - нельзя сделать ход
         public int Play(int cellX, int cellY)
         {
-            MakeMove(cellX, cellY);
-            int win = checkWin();
-            if (win == 1)
+            if (MakeMove(cellX, cellY))
             {
-                Clear();
-                return 1;
-            }
+                int win = checkWin();
+                if (win == 1)
+                {
+                    Clear();
+                    return 1;
+                }
 
-            if (win == -1)
-            {
-                Clear();
-                return 3;
-            }
+                if (win == -1)
+                {
+                    Clear();
+                    return 3;
+                }
 
-            if (checkDraw()) 
-            {
-                Clear();
-                return 2;
+                if (checkDraw())
+                {
+                    Clear();
+                    return 2;
+                }
+                return 0;
             }
-            return 0;
+            return 4;
         }
     };
 }

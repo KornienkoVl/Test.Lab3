@@ -37,6 +37,8 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn1
@@ -129,11 +131,32 @@
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(32, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 29);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Ход игрока:";
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPlayer.Location = new System.Drawing.Point(198, 43);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(0, 29);
+            this.lblPlayer.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 379);
+            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -144,9 +167,10 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Крестики-Нолики";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,6 +185,8 @@
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPlayer;
     }
 }
 
