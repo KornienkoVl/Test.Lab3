@@ -155,16 +155,25 @@ namespace TicTac
         }
 
         // 0 - игра продолжается
-        // 1 - кто-то победил
+        // 1 - победил Х
         // 2 - ничья
+        // 3 - победил O
         public int Play(int cellX, int cellY)
         {
             MakeMove(cellX, cellY);
-            if (checkWin() != 0)
+            int win = checkWin();
+            if (win == 1)
             {
                 Clear();
                 return 1;
             }
+
+            if (win == -1)
+            {
+                Clear();
+                return 3;
+            }
+
             if (checkDraw()) 
             {
                 Clear();

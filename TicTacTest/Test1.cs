@@ -223,7 +223,7 @@
             Assert.AreEqual(game.Play(2, 1), 0);
             Assert.AreEqual(game.Play(1, 1), 0);
             Assert.AreEqual(game.Play(2, 2), 0);
-            Assert.AreEqual(game.Play(1, 2), 1);
+            Assert.AreEqual(game.Play(1, 2), 3);
 
             Assert.AreEqual(game.map[0, 0], 0);
             Assert.AreEqual(game.map[1, 0], 0);
