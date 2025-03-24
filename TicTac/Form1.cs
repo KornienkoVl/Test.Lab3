@@ -125,8 +125,14 @@ namespace TicTac
                 if (checkSum == 3) return 1;
                 if (checkSum == -3) return -1;
             }
+            //диагонали
+            checkSum = map[0, 0] + map[1, 1] + map[2, 2];
+            if (checkSum == 3) return 1;
+            if (checkSum == -3) return -1;
 
-
+            checkSum = map[0, 2] + map[1, 1] + map[2, 0];
+            if (checkSum == 3) return 1;
+            if (checkSum == -3) return -1;
 
             return 0;
         }
