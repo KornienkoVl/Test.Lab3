@@ -20,6 +20,8 @@ namespace TicTac
         {
             InitializeComponent();
             game.MakeMove(1,1);
+            game.MakeMove(1, 2);
+            game.MakeMove(2, 2);
             MessageBox.Show(game.map[1,1].ToString());
         }
 
@@ -88,7 +90,10 @@ namespace TicTac
             if (map[cellX, cellY] != 0)
                 return false;
 
-            map[cellX, cellY] = 1;
+            map[cellX, cellY] = player;
+
+            ChangePlayer();
+
             return true;
         }
 
