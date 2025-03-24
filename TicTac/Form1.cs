@@ -102,5 +102,23 @@ namespace TicTac
             player = 0 - player;
         }
 
+        // 1 - победа Х
+        // 0 - нет победителя
+        //-1 - победа О
+        public int checkWin()
+        {
+            int checkSum = 0;
+
+            //горизонталь
+            for (int i = 0; i < 3; i++)
+            {
+                checkSum = map[i, 0] + map[i, 1] + map[i, 2];
+
+                if (checkSum == 3) return 1;
+                if (checkSum == -3) return -1;
+            }
+            return 0;
+        }
+
     };
 }
