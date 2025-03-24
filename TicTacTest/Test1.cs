@@ -126,6 +126,30 @@
 
             Assert.AreEqual(game.checkWin(), -1);
         }
+
+        [TestMethod]
+        public void TestMethodCheckWinDiagonal()
+        {
+            Game game = new Game();
+
+            Assert.AreEqual(game.checkWin(), 0);
+
+            game.map[0, 0] = 1;
+            game.map[1, 1] = 1;
+            game.map[2, 2] = 1;
+
+            Assert.AreEqual(game.checkWin(), 1);
+
+            game.map[0, 0] = 0;
+            game.map[1, 1] = 0;
+            game.map[2, 2] = 0;
+
+            game.map[0, 2] = -1;
+            game.map[1, 1] = -1;
+            game.map[2, 0] = -1;
+
+            Assert.AreEqual(game.checkWin(), -1);
+        }
     }
 
 }
