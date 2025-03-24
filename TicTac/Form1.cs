@@ -83,6 +83,9 @@ namespace TicTac
             if (cellX < 0 || cellX > 2 || cellY < 0 || cellY > 2)
                 return false;
 
+            if (map[cellX, cellY] != 0)
+                return false;
+
             map[cellX, cellY] = 1;
             return true;
         }
