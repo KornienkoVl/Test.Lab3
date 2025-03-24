@@ -78,6 +78,8 @@ namespace TicTac
     {
         public int[,] map = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
 
+        public int player = 1;
+
         public bool MakeMove(int cellX, int cellY)
         {
             if (cellX < 0 || cellX > 2 || cellY < 0 || cellY > 2)
@@ -88,6 +90,11 @@ namespace TicTac
 
             map[cellX, cellY] = 1;
             return true;
+        }
+
+        public void ChangePlayer()
+        {
+            player = 0 - player;
         }
 
     };
