@@ -153,5 +153,24 @@ namespace TicTac
 
             player = 1;
         }
+
+        // 0 - игра продолжается
+        // 1 - кто-то победил
+        // 2 - ничья
+        public int Play(int cellX, int cellY)
+        {
+            MakeMove(cellX, cellY);
+            if (checkWin() != 0)
+            {
+                Clear();
+                return 1;
+            }
+            if (checkDraw()) 
+            {
+                Clear();
+                return 2;
+            }
+            return 0;
+        }
     };
 }
