@@ -137,5 +137,12 @@ namespace TicTac
             return 0;
         }
 
+        public bool checkDraw()
+        {
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    if (map[i, j] == 0) return false;
+            return true;
+        }
     };
 }
