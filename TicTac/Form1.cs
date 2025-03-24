@@ -117,6 +117,17 @@ namespace TicTac
                 if (checkSum == 3) return 1;
                 if (checkSum == -3) return -1;
             }
+            //вертикаль
+            for (int i = 0; i < 3; i++)
+            {
+                checkSum = map[0, i] + map[1, i] + map[2, i];
+
+                if (checkSum == 3) return 1;
+                if (checkSum == -3) return -1;
+            }
+
+
+
             return 0;
         }
 
