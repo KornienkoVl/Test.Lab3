@@ -80,6 +80,9 @@ namespace TicTac
 
         public bool MakeMove(int cellX, int cellY)
         {
+            if (cellX < 0 || cellX > 2 || cellY < 0 || cellY > 2)
+                return false;
+
             map[cellX, cellY] = 1;
             return true;
         }
