@@ -207,4 +207,35 @@
             Assert.AreEqual(game.player, 1);
         }
     }
+
+    [TestClass]
+    public sealed class TestPlay
+    {
+        [TestMethod]
+        public void TestMethodPlayWin()
+        {
+            Game game = new Game();
+
+            Assert.AreEqual(game.Play(0, 0), 0);
+            Assert.AreEqual(game.Play(1, 0), 0);
+            Assert.AreEqual(game.Play(0, 1), 0);
+            Assert.AreEqual(game.Play(0, 2), 0);
+            Assert.AreEqual(game.Play(2, 1), 0);
+            Assert.AreEqual(game.Play(1, 1), 0);
+            Assert.AreEqual(game.Play(2, 2), 0);
+            Assert.AreEqual(game.Play(1, 2), 1);
+
+            Assert.AreEqual(game.map[0, 0], 0);
+            Assert.AreEqual(game.map[1, 0], 0);
+            Assert.AreEqual(game.map[0, 1], 0);
+            Assert.AreEqual(game.map[0, 2], 0);
+            Assert.AreEqual(game.map[2, 1], 0);
+            Assert.AreEqual(game.map[1, 1], 0);
+            Assert.AreEqual(game.map[2, 2], 0);
+            Assert.AreEqual(game.map[1, 2], 0);
+
+            Assert.AreEqual(game.player, 1);
+
+        }
+    }
 }
