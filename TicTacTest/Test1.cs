@@ -76,4 +76,32 @@
         }
     }
 
+    [TestClass]
+    public sealed class TestCheckWin
+    {
+        [TestMethod]
+        public void TestMethodCheckWinHorizon()
+        {
+            Game game = new Game();
+
+            Assert.AreEqual(game.checkWin(), 0);
+
+            game.map[0, 0] = 1;
+            game.map[0, 1] = 1;
+            game.map[0, 2] = 1;
+
+            Assert.AreEqual(game.checkWin(), 1);
+
+            game.map[0, 0] = 0;
+            game.map[0, 1] = 0;
+            game.map[0, 2] = 0;
+
+            game.map[2, 0] = -1;
+            game.map[2, 1] = -1;
+            game.map[2, 2] = -1;
+
+            Assert.AreEqual(game.checkWin(), -1);
+        }
+    }
+
 }
