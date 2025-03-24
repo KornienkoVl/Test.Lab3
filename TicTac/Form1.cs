@@ -144,5 +144,14 @@ namespace TicTac
                     if (map[i, j] == 0) return false;
             return true;
         }
+
+        public void Clear()
+        {
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    map[i, j] = 0;
+
+            player = 1;
+        }
     };
 }
