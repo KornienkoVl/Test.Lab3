@@ -152,4 +152,38 @@
         }
     }
 
+    [TestClass]
+    public sealed class TestCheckDraw
+    {
+        [TestMethod]
+        public void TestMethodCheckDraw()
+        {
+            Game game = new Game();
+
+            Assert.IsFalse(game.checkDraw());
+
+            game.MakeMove(0, 0);
+            game.MakeMove(0, 1);
+            game.MakeMove(0, 2);
+
+            Assert.IsFalse(game.checkDraw());
+
+            game.MakeMove(1, 0);
+            game.MakeMove(1, 1);
+            game.MakeMove(1, 2);
+
+            Assert.IsFalse(game.checkDraw());
+
+            game.MakeMove(2, 0);
+            game.MakeMove(2, 1);
+
+            Assert.IsFalse(game.checkDraw());
+
+            game.MakeMove(2, 2);
+
+            Assert.IsTrue(game.checkDraw());
+
+        }
+    }
+
 }
